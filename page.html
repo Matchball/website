@@ -5,13 +5,31 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- custom css styles file page.css -->
-	<link rel="stylesheet" href="css/page.css">
+	
+	<!-- to connect with firebase -->
+	
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAcucm1Rn96Ykl9kGbEwRx8AiyBpcxlTjg",
+		    authDomain: "matchpoint-abe8e.firebaseapp.com",
+		    databaseURL: "https://matchpoint-abe8e.firebaseio.com",
+		    projectId: "matchpoint-abe8e",
+		    storageBucket: "",
+		    messagingSenderId: "969910365945"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
 
 	<!-- to use bootsrap libraries are added online -->
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- custom css styles file page.css it should be after bootstrap css to function navbar toggle properly as, .collapse class of bootstrap should overriden -->
+	<link rel="stylesheet" href="css/page.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,11 +40,15 @@
 	<!-- font Montserret -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,500" rel="stylesheet">
 
+	<!-- velocity.js  -->
+	<!-- <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script> -->
+	<!-- velocity ui.js -->
+	<!-- <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.ui.min.js"></script> -->
 	<!-- js file -->
 	<script type="text/javascript" src="js/page.js"></script>
 
 	<title>MatchBall</title>
-	<link rel="shortcut icon" href="F:\destp\MC\Final set of logos\Final set of logos\PNG\Png - Only Logo - Variant 3.png" type="image/x-icon">  <!-- href="images/Png - Only Logo - Variant 4.ico" -->
+	<link rel="shortcut icon" href="images/Png - Only Logo - Variant 3_t72x72.png" />
 
 	<!-- zendesk plugin -->
 	<!--Start of Zendesk Chat Script-->
@@ -39,17 +61,18 @@
 		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 		</script>
 	<!--End of Zendesk Chat Script-->
+	
 </head>
 
 <header>
 	<div id="s1">
 
 		<div id="s1_1">
-			<img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L">
+			<!-- <img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L"> -->
 		</div>
-		<div id="s1_2">
+		<div id="s1_2" class="navbar-fixed">
 			<hr class="strip">
-			<nav class="navbar navbar-inverse" role="navigation">
+			<nav class="navbar navbar-inverse" role="navigation" style="height: 55px; padding-top: 2px; background-color: #000;">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -57,25 +80,25 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#" id="a_logo_l_s">
-							<img src="images/Whole_Logo_custom_1.png" class="img-responsive" id="logo_l_s">
-						</a>
 						<a class="navbar-brand" href="#" id="a_logo_s_s">
-							<img src="images/logo-v1_4_c.jpg"  class="img-responsive" id="logo_s_s" >
+							<img src="images/Png - Only Logo - Variant 2.png"  class="img-responsive" id="logo_s_s" >
+						</a>
+						<a class="navbar-brand" href="#" id="a_logo_l_s">
+							<img src="images/Png - Only Text - White.png" class="img-responsive" id="logo_l_s" >
 						</a>
 					</div>
 				
-					<div class="collapse navbar-collapse" id="myNavbar">
+					<div class="collapse navbar-collapse" id="myNavbar" style="height: 100%">
 						<ul class="nav navbar-nav navbar-left">
-							<li class="active" id="l_hiw"><a href="#" id="hiw">HOW IT WORKS</a></li>
-							<li id="l_cp"><a href="#" id="cp">COACHES</a></li>
-							<li id="l_cp"><a href="#" id="au">ABOUT</a></li>
+							<li class="active" id="l_hiw"><a href="#s3" id="hiw" class="navLink">HOW IT WORKS</a></li>
+							<li id="l_cp"><a href="#s4_1" id="cp" class="navLink">COACHES</a></li>
+							<li id="l_cp"><a href="#s5" id="au" class="navLink">ABOUT</a></li>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el">ENROLL</a></li>
-							<li id="l_ma"><a href="#" id="ma">MANAGE ACCOUNT</a></li>
-							<li id="l_aq"><a href="#" id="aq">CONTACT</a></li>
+							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el" target="_blank">ENROLL</a></li>
+							<li id="l_ma"><a href="#" id="ma" class="navLink">MANAGE ACCOUNT</a></li>
+							<li id="l_aq"><a href="#cftr" id="aq" class="navLink">CONTACT</a></li>
 						</ul>
 					</div>
 				</div>
@@ -104,20 +127,20 @@
 						<!-- wrapper for slides -->
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="images/n_i_0.jpg" alt="I-1" class="slides">
-								<img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%">
+								<img src="images/matchball.jpg" alt="I-1" class="slides" width="100%">
+								<!-- <img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%"> -->
 							</div>
 							<div class="item">
-								<img src="images/n_i_1.jpg" alt="I-2" class="slides">
-								<img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%">
+								<img src="images/matchballslide3.jpg" alt="I-2" class="slides" width="100%">
+								<!-- <img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%"> -->
 							</div>
 							<div class="item">
-								<img src="images/n_i_2.jpg" alt="I-3" class="slides">
-								<img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%">
+								<img src="images/matchballslide1.jpg" alt="I-3" class="slides" width="100%">
+								<!-- <img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%"> -->
 							</div>
 							<div class="item">
-								<img src="images/n_i_3.jpg" alt="I-4" class="slides">
-								<img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%">
+								<img src="images/matchballslide2.jpg" alt="I-4" class="slides" width="100%">
+								<!-- <img src="images/skew-full-bottom-ccw.png" class="t_u_l img-responsive" width="100%"> -->
 							</div>
 						</div>
 
@@ -319,7 +342,8 @@
 
 </body>
 
-<footer>
+<footer id="cftr">
+        <a href="https://msg91.com/startups/?utm_source=startup-banner"><img src="https://msg91.com/images/startups/msg91Badge.png" width="120" height="90" title="MSG91 - SMS for Startups" alt="Bulk SMS - MSG91"></a>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-xs-0">
@@ -339,7 +363,7 @@
 		<a href="tel:9619636667" id="t_link" class="e_links">+91 96196 36667</a> <a href="http://mailto:prashant@matchball.org" id="e_link" class="e_links">prashant@matchball.org</a>
 	</div>
 	<div id="copyright">
-		Copyright 2017 <span style="color: #F3CF43;"> Matchball </span> . All Rights Reserved
+		Copyright 2017 <span style="color: #F3CF43;"> Matchball<sup>TM</sup> </span> . All Rights Reserved
 	</div>
 </footer>
 </html>

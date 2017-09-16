@@ -5,13 +5,34 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<!-- custom css styles file page.css -->
 	<link rel="stylesheet" href="css/en1_page.css">
+
+
+	<!-- to connect with firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAcucm1Rn96Ykl9kGbEwRx8AiyBpcxlTjg",
+		    authDomain: "matchpoint-abe8e.firebaseapp.com",
+		    databaseURL: "https://matchpoint-abe8e.firebaseio.com",
+		    projectId: "matchpoint-abe8e",
+		    storageBucket: "",
+		    messagingSenderId: "969910365945"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 
 	<!-- to use bootsrap libraries are added online -->
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- custom css styles file page.css it should be after bootstrap css to function navbar toggle properly as, .collapse class of bootstrap should overriden -->
+	<!-- custom css styles file page.css -->
+	<link rel="stylesheet" href="css/en1_page.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -45,18 +66,19 @@
 		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 		</script>
 	<!--End of Zendesk Chat Script-->
+
 	
 </head>
 
 <header>
 	<div id="s1">
 
-		<!-- <div id="s1_1">
-			<img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L">
-		</div> -->
-		<div id="s1_2">
+		<div id="s1_1">
+			<!-- <img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L"> -->
+		</div>
+		<div id="s1_2" class="navbar-fixed">
 			<hr class="strip">
-			<nav class="navbar navbar-inverse" role="navigation">
+			<nav class="navbar navbar-inverse" role="navigation" style="height: 55px; padding-top: 2px; background-color: #000;">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -64,25 +86,27 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#" id="a_logo_l_s">
-							<img src="images/Whole_Logo_custom_1.png" class="img-responsive" id="logo_l_s">
+						<a href="#" class="navbar-brand" id="a_logo_s_s" onclick='window.open("https://matchball.org");return false;' >
+						<!-- <a class="navbar-brand" href="https://matchball.org" id="a_logo_s_s" target="_blank"> -->
+							<img src="images/Png - Only Logo - Variant 2.png"  class="img-responsive" id="logo_s_s" >
 						</a>
-						<a class="navbar-brand" href="#" id="a_logo_s_s">
-							<img src="images/logo-v1_4_c.jpg"  class="img-responsive" id="logo_s_s" >
+						<a href="#" class="navbar-brand" id="a_logo_l_s" onclick='window.open("https://matchball.org");return false;' >
+						<!-- <a class="navbar-brand" href="https://matchball.org" id="a_logo_l_s" target="_blank"> -->
+							<img src="images/Png - Only Text - White.png" class="img-responsive" id="logo_l_s" >
 						</a>
 					</div>
 				
-					<div class="collapse navbar-collapse" id="myNavbar">
+					<div class="collapse navbar-collapse" id="myNavbar" style="height: 100%">
 						<ul class="nav navbar-nav navbar-left">
-							<li class="active" id="l_hiw"><a href="#" id="hiw">HOW IT WORKS</a></li>
-							<li id="l_cp"><a href="#" id="cp">COACHES</a></li>
-							<li id="l_cp"><a href="#" id="au">ABOUT</a></li>
+							<li class="active" id="l_hiw"><a href="#s3" id="hiw" class="navLink">HOW IT WORKS</a></li>
+							<li id="l_cp"><a href="#s4_1" id="cp" class="navLink">COACHES</a></li>
+							<li id="l_cp"><a href="#s5" id="au" class="navLink">ABOUT</a></li>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el">ENROLL</a></li>       <!--   https://matchball.org/en1_page.html -->
-							<li id="l_ma"><a href="#" id="ma">MANAGE ACCOUNT</a></li>
-							<li id="l_aq"><a href="#" id="aq">CONTACT</a></li>
+							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el">ENROLL</a></li>
+							<li id="l_ma"><a href="#" id="ma" class="navLink">MANAGE ACCOUNT</a></li>
+							<li id="l_aq"><a href="#cftr" id="aq" class="navLink">CONTACT</a></li>
 						</ul>
 					</div>
 				</div>
@@ -104,54 +128,65 @@
 				<!-- steps will be here -->
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-sm-3 col-xs-12">
-							<div id="b1" class="box">
-								<div class="num" id="num1">
+						<div id="step_wrapper">	
+							<div class="col-sm-3 col-xs-12">
+								<div id="b1" class="box">
+									<div class="num" id="num1">
+										1
+									</div>
+									<div class="step_name" id="sn1">
+										<p><h3>SQUASH CENTER</h3><br><h1>Information</h1></p>
+									</div>
 								</div>
-								<div class="step_name" id="sn1">
-								</div>
-							</div>
-							<div id="e1" class="edge">
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div id="b2" class="box box_r">
-								<div class="num" id="num2">
-								</div>
-								<div class="step_name" id="sn2">
+								<div id="e1" class="edge">
 								</div>
 							</div>
-							<div id="e2" class="edge">
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div id="b3" class="box box_r">
-								<div class="num" id="num3">
+							<div class="col-sm-3 col-xs-12">
+								<div id="b2" class="box box_r">
+									<div class="num " id="num2" style="color: blue">
+										2
+									</div>
+									<div class="step_name" id="sn2" style="margin-left: 40px">
+										<p><h3 style="color: blue">SIGN UP</h3><br><h1 style="color: black">Personal details</h1></p>
+									</div>
 								</div>
-								<div class="step_name" id="sn3">
-								</div>
-							</div>
-							<div id="e3" class="edge">
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div id="b4" class="box box_r">
-								<div class="num" id="num4">
-								</div>
-								<div class="step_name" id="sn4">
+								<div id="e2" class="edge not1_edge">
 								</div>
 							</div>
-							<div id="e4" class="edge">
+							<div class="col-sm-3 col-xs-12">
+								<div id="b3" class="box box_r">
+									<div class="num" id="num3" style="color: blue">
+										3
+									</div>
+									<div class="step_name" id="sn3" style="margin-left: 40px">
+										<p><h3 style="color: blue">Confirmation</h3><br><h1 style="color: black">Voice call</h1></p>
+									</div>
+								</div>
+								<div id="e3" class="edge not1_edge">
+								</div>
+							</div>
+							<div class="col-sm-3 col-xs-12">
+								<div id="b4" class="box box_r">
+									<div class="num" id="num4" style="color: blue">
+										4
+									</div>
+									<div class="step_name" id="sn4" style="margin-left: 40px">
+										<p><h3 style="color: blue">Payment</h3><br><h1 style="color: black">Select method</h1></p>
+									</div>
+								</div>
+								<div id="e4" class="edge not1_edge">
+								</div>
 							</div>
 						</div>
 					</div>
+					
 				</div>
 				
 			</div>
-			<div class="col-sm-2 col-xs-0">
-			</div>
+			
 		</div>
 	</div>
+	
 </div>
 
 <div id="s3">
@@ -160,10 +195,12 @@
 			<div class="col-sm-4 col-xs-0">
 			</div>
 			<div class="col-sm-4 col-xs-12">
-				<div class="form-group has-feedback">
-				    <label class="control-label" for="inputSuccess2"></label>
-				    <input type="text" class="form-control" id="inputSuccess2" placeholder="Search" />
-				    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+				<div class="form-group">
+				    <label for="city" style="padding-right: 10px">City</label>
+				    <select class="form-control" id="city" style="width: 80%; display: inline-block;">
+				    	<option>Gurgaon</option>
+				    	<option>Noida</option>
+				    </select>
 				</div>	
 			</div>
 			<div class="col-sm-4 col-xs-0">
@@ -176,8 +213,11 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-xs-12">
-				<button>
-					<h1>ATS VILLAGE</h1>
+			</div>
+
+			<div class="col-sm-3 col-xs-12">
+				<button id="Gurgaon complex">
+					<h1>Gurgaon complex</h1>
 					<h3>Sec-93 Noida</h3>
 					<div class="r_container">
 						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
@@ -188,18 +228,20 @@
 				</button>
 			</div>
 			<div class="col-sm-3 col-xs-12">
-				<button>
-					<h1>ATS VILLAGE</h1>
-					<h3>Sec-93 Noida</h3>
+				<button id="nehru stadium">
+					<h1>Nehru stadium</h1>
+					<h3>Sec-90 Noida</h3>
 					<div class="r_container">
 						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
 					</div>
 					<div class="l_container">
-						<img src="images/wrong_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
+						<img src="images/right_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
 					</div>
 				</button>
 			</div>
 			<div class="col-sm-3 col-xs-12">
+			</div>
+			<!-- <div class="col-sm-3 col-xs-12" style="display: none;">
 				<button>
 					<h1>ATS VILLAGE</h1>
 					<h3>Sec-93 Noida</h3>
@@ -211,7 +253,7 @@
 					</div>
 				</button>
 			</div>
-			<div class="col-sm-3 col-xs-12">
+			<div class="col-sm-3 col-xs-12" style="display: none;">
 				<button>
 					<h1>ATS VILLAGE</h1>
 					<h3>Sec-93 Noida</h3>
@@ -222,7 +264,7 @@
 						<img src="images/wrong_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
 					</div>
 				</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
@@ -240,8 +282,8 @@
 				</div>
 			</div>
 			<div class="col-sm-4 col-xs-12" id="right_text">
-				<img src="images/right_tick_1.png" alt="Availabe" height="100px">
-				<h3>Free Slot is Available</h3>
+				<img height="100px" id="tickImage">
+				<h3 id="avaialbleText">Select center and date</h3>
 			</div>
 		</div>
 	</div>
@@ -249,13 +291,13 @@
 
 
 <div id="s6" onclick="location.href='https://matchball.org/en2_page.html'">
-	<button>Next step</button>
+	<button id="nextStep" disabled>Next step</button>
 </div>
 </body>
 
 
 
-<footer>
+<footer id="cftr">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-xs-0">
@@ -279,3 +321,4 @@
 	</div>
 </footer>
 </html>
+

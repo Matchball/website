@@ -5,14 +5,31 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- custom css styles file page.css -->
-	<link rel="stylesheet" href="css/en2_page.css">
+	
+
+	<!-- to connect with firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAcucm1Rn96Ykl9kGbEwRx8AiyBpcxlTjg",
+		    authDomain: "matchpoint-abe8e.firebaseapp.com",
+		    databaseURL: "https://matchpoint-abe8e.firebaseio.com",
+		    projectId: "matchpoint-abe8e",
+		    storageBucket: "gs://matchpoint-abe8e.appspot.com/",
+		    messagingSenderId: "969910365945"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 	
 
 	<!-- to use bootsrap libraries are added online -->
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- custom css styles file page.css -->
+	<link rel="stylesheet" href="css/en2_page.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,7 +51,7 @@
 
 	<title>MatchBall</title>
 	<link rel="shortcut icon" href="images/Png - Only Logo - Variant 3.png" type="image/x-icon">  <!-- href="images/Png - Only Logo - Variant 4.ico" -->
-	
+
 	<!-- zendesk plugin -->
 	<!--Start of Zendesk Chat Script-->
 		<script type="text/javascript">
@@ -52,12 +69,12 @@
 <header>
 	<div id="s1">
 
-		<!-- <div id="s1_1">
-			<img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L">
-		</div> -->
-		<div id="s1_2">
+		<div id="s1_1">
+			<!-- <img src="images/Whole_Logo_2.jpg" class="img-responsive" alt="LOGO" id="I_L"> -->
+		</div>
+		<div id="s1_2" class="navbar-fixed">
 			<hr class="strip">
-			<nav class="navbar navbar-inverse" role="navigation">
+			<nav class="navbar navbar-inverse" role="navigation" style="height: 55px; padding-top: 2px; background-color: #000;">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -65,25 +82,27 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#" id="a_logo_l_s">
-							<img src="images/Whole_Logo_custom_1.png" class="img-responsive" id="logo_l_s">
+						<a href="#" class="navbar-brand" id="a_logo_s_s" onclick='window.open("https://matchball.org");return false;' >
+						<!-- <a class="navbar-brand" href="https://matchball.org" id="a_logo_s_s" target="_blank"> -->
+							<img src="images/Png - Only Logo - Variant 2.png"  class="img-responsive" id="logo_s_s" >
 						</a>
-						<a class="navbar-brand" href="#" id="a_logo_s_s">
-							<img src="images/logo-v1_4_c.jpg"  class="img-responsive" id="logo_s_s" >
+						<a href="#" class="navbar-brand" id="a_logo_l_s" onclick='window.open("https://matchball.org");return false;' >
+						<!-- <a class="navbar-brand" href="https://matchball.org" id="a_logo_l_s" target="_blank"> -->
+							<img src="images/Png - Only Text - White.png" class="img-responsive" id="logo_l_s" >
 						</a>
 					</div>
 				
-					<div class="collapse navbar-collapse" id="myNavbar">
+					<div class="collapse navbar-collapse" id="myNavbar" style="height: 100%">
 						<ul class="nav navbar-nav navbar-left">
-							<li class="active" id="l_hiw"><a href="#" id="hiw">HOW IT WORKS</a></li>
-							<li id="l_cp"><a href="#" id="cp">COACHES</a></li>
-							<li id="l_cp"><a href="#" id="au">ABOUT</a></li>
+							<li class="active" id="l_hiw"><a href="#s3" id="hiw" class="navLink">HOW IT WORKS</a></li>
+							<li id="l_cp"><a href="#s4_1" id="cp" class="navLink">COACHES</a></li>
+							<li id="l_cp"><a href="#s5" id="au" class="navLink">ABOUT</a></li>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el">ENROLL</a></li>		
-							<li id="l_ma"><a href="#" id="ma">MANAGE ACCOUNT</a></li>
-							<li id="l_aq"><a href="#" id="aq">CONTACT</a></li>
+							<li id="l_el"><a href="https://matchball.org/en1_page.html" id="el">ENROLL</a></li>
+							<li id="l_ma"><a href="#" id="ma" class="navLink">MANAGE ACCOUNT</a></li>
+							<li id="l_aq"><a href="#cftr" id="aq" class="navLink">CONTACT</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,16 +117,122 @@
 	<div id="s2">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-1 col-xs-0">
+				<div class="col-sm-2 col-xs-0">
 				</div>
-				<div class="col-sm-10 col-xs-12">
+				<div class="col-sm-8 col-xs-12">
 					<!-- steps will be here -->
+					<div class="container-fluid">
+						<div class="row">
+							<div id="step_wrapper">	
+								<div class="col-sm-3 col-xs-12">
+									<div id="b1" class="box">
+										<div class="num" id="num1" style="color: blue">
+											1
+										</div>
+										<div class="step_name" id="sn1">
+											<p><h3 style="color: blue">SQUASH CENTER</h3><br><h1 style="color: black">Information</h1></p>
+										</div>
+									</div>
+									<div id="e1" class="edge">
+									</div>
+								</div>
+								<div class="col-sm-3 col-xs-12">
+									<div id="b2" class="box box_r">
+										<div class="num " id="num2" style="color: white">
+											2
+										</div>
+										<div class="step_name" id="sn2" style="margin-left: 40px">
+											<p><h3 style="color: white">SIGN UP</h3><br><h1 style="color: rgb(78, 183, 245);">Personal details</h1></p>
+										</div>
+									</div>
+									<div id="e2" class="edge not1_edge">
+									</div>
+								</div>
+								<div class="col-sm-3 col-xs-12">
+									<div id="b3" class="box box_r">
+										<div class="num" id="num3" style="color: blue">
+											3
+										</div>
+										<div class="step_name" id="sn3" style="margin-left: 40px">
+											<p><h3 style="color: blue">Confirmation</h3><br><h1 style="color: black">Voice call</h1></p>
+										</div>
+									</div>
+									<div id="e3" class="edge not1_edge">
+									</div>
+								</div>
+								<div class="col-sm-3 col-xs-12">
+									<div id="b4" class="box box_r">
+										<div class="num" id="num4" style="color: blue">
+											4
+										</div>
+										<div class="step_name" id="sn4" style="margin-left: 40px">
+											<p><h3 style="color: blue">Payment</h3><br><h1 style="color: black">Select method</h1></p>
+										</div>
+									</div>
+									<div id="e4" class="edge not1_edge">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
 				</div>
-				<div class="col-sm-1 col-xs-0">
+				
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="s2_s3_r">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12" style="text-align: right;">
+					<div id="fb_icon">
+						<a onclick=signInWithFacebook() href="#">
+							<img src="images/fb_sign_in.jpg" alt="FB_LOGO" height="100px" width="300px">
+						</a>
+					</div>
+					<div id="hr_left">
+						<hr id="hr_l">
+					</div>
+					<div id="or" style="text-align: center;">
+						<h1>OR</h1>
+					</div>
+				</div>
+				
+
+				<div class="col-sm-6 col-xs-12">
+					<div id="gmail_icon">
+						<a onclick=signInWithGoogle() href="#">
+							<img src="images/gm_logo.png" alt="GMAIL_LOGO" height="49px">
+						</a>
+					</div>
+					<div id="hr_right">
+						<hr id="hr_r">
+					</div>
 				</div>
 			</div>
 		</div>
+		
+		<!-- <div id="fb_icon">
+			<a href="#">
+				<img src="images/fb_sign_in.jpg" alt="FB_LOGO" height="100px" width="300px">
+			</a>
+		</div>
+		<div id="gmail_icon">
+			<a href="#">
+				<img src="images/gm_logo.png" alt="GMAIL_LOGO" height="50px">
+			</a>
+		</div>	 -->	
 	</div>
+
+	<!-- for "or" on small devices -->
+	<div id="s2_or_small">
+		<div id="or_small">
+			<h1>OR</h1>
+		</div>
+	</div> 
 
 	<div id="s3">
 		<div class="container-fluid">
@@ -115,18 +240,18 @@
 				<div class="col-sm-6 col-xs-12" id="l_portion">
 					<form>
 						<div class="form-group">
-							<label for="u_name" class="standard_label">Username</label>
+							<label for="u_name" class="standard_label">Display name</label>
 							<input type="text" name="u_name" id="u_name" class="standard_input">
 						</div>
-						<div class="form-group" class="standard_label">
+						<div class="form-group hideable">
 							<label for="u_email">E-mail</label>
 							<input type="email" name="u_email" id="u_email" class="standard_input">
 						</div>
-						<div class="form-group">
+						<div class="form-group hideable">
 							<label for="u_password" class="standard_label">Password</label>
 							<input type="password" name="u_password" id="u_password" class="standard_input">
 						</div>
-						<div class="form-group">
+						<div class="form-group hideable">
 							<label for="u_rpassword" class="standard_label">Re-type Password</label>
 							<input type="password" name="u_rpassword" id="u_rpassword" class="standard_input">
 						</div>
@@ -139,32 +264,60 @@
 							<input type="date" name="u_dob" id="u_dob" class="standard_input">
 						</div>
 						<div class="form-group">
-							<label for="u_filename" class="standard_label">Avatar</label>
+							<label for="u_address" class="standard_label">Address</label>
+							<textarea name="u_address" rows="5" id="u_address" class="standard_input" style="height: 100px; vertical-align: middle;"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="u_filename" class="standard_label">Profile picture</label>
 							<input type="text" name="u_filename" id="u_filename" class="standard_input">						
 							<label for="u_avatar" id="u_avatar_label">Browse</label>
-							<input type="file" accept="image/*" name="u_avatar" id="u_avatar" onchange=CopyMe(this); > 
+							<input type="file" accept="image/*" name="u_avatar" id="u_avatar" > 
 							
 						</div>
 					</form>
 				</div>
 				<div class="col-sm-6 col-xs-12" id="r_portion">
-					<div id="or">
-						<h1>OR</h1>
+					<!-- <div id="incorrectEmail">
+						<h3 style="opacity: 0; color: red">&#42;email-address is not correct</h3>
 					</div>
-
-					<div id="fb_icon">
-						<a href="#">
-							<img src="images/fb_sign_in.jpg" alt="FB_LOGO" height="100px" width="300px">
-						</a>
+					<div id="passwordMismatchText">
+						<h3 style="opacity: 0; color: red">&#42;passwords are not matching</h3>
 					</div>
-					<div id="gmail_icon">
-						<a href="#">
-							<img src="images/gm_logo.png" alt="GMAIL_LOGO" height="50px">
-						</a>
-					</div>
+					<div id="incorrectMobileNumber">
+						<h3 style="opacity: 0; color: red">&#42;mobile number should be of 10 digits</h3>
+					</div> -->
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- Terms and Condition Links -->
+	<div id="s3_termsAndConditions">
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-xs-0">
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<form>
+						<div class="form-group">
+							<div class="checkbox checkbox-primary">
+								<input type="checkbox" name="accept" id="accept" class="styled">
+								<label for="accept">I agree to <a href="#" onclick="window.open('https://matchball.org/tnc.html');">Terms and conditions </a> and <a href="#" onclick="window.open('https://matchball.org/privacy.html');">Privacy policy</a></label>
+							</div>
+							<div class="checkbox checkbox-primary">
+								<input type="checkbox" name="newsletter" id="newsletter" class="styled">
+								<label for="newsletter">Sign-up to our newsletter</label>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-sm-5 col-xs-0">
+				</div>
+			</div>
+		</div>
+	
 	</div>
 
 	<div id="s4">
@@ -173,7 +326,7 @@
 				<div class="col-sm-10 col-xs-0">
 				</div>
 				<div class="col-sm-2 col-xs-12">
-					<button onclick="location.href='https://matchball.org/en3_page.html'">Next step</button>
+					<button id="createUserAndNext">Next step</button>
 				</div>
 			</div>
 		</div>
@@ -183,7 +336,7 @@
 
 
 
-<footer>
+<footer id="cftr">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-xs-0">
