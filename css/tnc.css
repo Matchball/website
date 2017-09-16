@@ -1,0 +1,369 @@
+/*change background comments in #s4, #s6 , #s8 */
+html{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+#s1_2 hr{
+	height: 3px;
+    border: 1px solid;
+    color: #F3CF43;
+    background-color: #F3CF43;
+    margin: 0%;
+}
+
+nav{
+	/*height: 56px;*/
+	background-color: #000;
+}
+
+nav .container-fluid{
+	padding-right: 0%;
+	padding-left: 0%;
+	width: 100%;
+}
+
+.navbar-left{
+    margin-right: 6%;
+}
+#a_logo_s_s{
+	transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    padding-top:0; 
+}
+#logo_s_s{
+	opacity: 1;
+	height: 80px;
+	padding-left: 30px;
+	/*transition: opacity 0.3s ease-in-out;*/
+}
+
+#a_logo_l_s{
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    padding-top:0; 
+}
+#logo_l_s{
+	opacity: 0;
+	height: 50px;
+	padding-left: 30px;
+	/*transition: opacity 0.3s ease-in-out;*/
+}
+
+#myNavbar{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: black;
+}
+
+#myNavbar a{
+	font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+    transition: all 0.1s;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#myNavbar a:visited{
+	text-decoration: none;
+	text-underline-position: 5%;
+}
+
+#myNavbar a:focus{
+	text-decoration: none;
+	color: #F3CF43;
+	/*border-bottom: 4px solid #F3CF43; */
+}
+
+#myNavbar a:hover{
+	text-decoration: none;
+	color: #F3CF43;
+	border-bottom: 4px solid #F3CF43; 
+}
+
+#myNavbar .active{
+	color: #F3CF43;
+	/*border-bottom: 4px solid #F3CF43; */
+	text-decoration: none;
+} 
+
+#s1_1 img{
+	/*opacity: 0.2;*/
+}
+
+#s1_2{
+	/*border: 2px solid LawnGreen;*/
+	margin-bottom: -70px;
+}
+
+#nav_row{
+	/*border: 2px solid LemonChiffon;*/
+    height: 100%;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.navbar-fixed {
+    top:0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-left{
+
+}
+#l_hiw{
+
+}
+#hiw{
+
+}
+#l_cp{
+    
+}
+#cp{
+	
+}
+
+#l_au{
+
+}
+#au{
+    
+}
+
+.navbar-right{
+	
+}
+
+#l_el{
+   
+}
+#el{
+	
+}
+
+#l_ma{
+
+}
+#ma{
+	
+}
+
+#l_aq{
+
+}
+#aq{
+	
+}
+
+#HEADING{
+	padding-top: 90px;
+	font-family: 'Montserrat' ,sans-serif;
+	text-align: center;
+	font-family: 'Montserrat' ,sans-serif;
+	font-size: 40px;
+	color: #4dd421;
+}
+
+.section{
+	margin-left: 20px;
+	margin-top: 30px;
+	font-family: 'Montserrat' ,sans-serif;
+}
+
+.heading{
+	font-size: 24px;
+	/*text-align: center;*/
+	color: rgb(78, 90, 8);
+}
+
+.explanation{
+	
+	margin-right: 10px;
+	font-size: 16px;
+	color: rgb(136, 106, 22);
+}
+
+
+
+
+
+
+
+footer{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	background-color: black;
+	font-family: 'Montserrat' ,sans-serif;
+}
+
+.e_social_links{
+	margin-top: 1%;
+
+}
+
+.e_links{
+    text-decoration: none;
+    /*border: 1px solid white;*/
+    margin-right: 2%;
+    color: white;
+   
+    font-size: 24px;
+}
+
+.e_links:focus{
+	text-decoration: none;
+	color: white;
+}
+
+#t_link{
+    border-right: 1px solid;
+    margin-left: 14%;
+    padding-right: 4%;
+}
+
+#e_link{
+    padding-right: 3%;
+    margin-left: 2%;
+}
+
+#s_ad{
+	padding-left: 2%;
+    padding-right: 2%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer a:hover{
+	text-decoration: none;
+	color: #F3CF43; 
+	border-color: white;
+}
+
+footer a:focus{
+	text-decoration: none;
+}
+
+
+#copyright{
+	color: white;
+	margin-top: 1%;
+}
+
+@media screen and (min-width: 1000px){
+	#l_hiw {
+	    margin-left: -15px;
+	}
+	#l_cp{
+    	margin-left: 30px;
+	}
+	#l_el{
+	    margin-right: 15px;
+	}
+	#l_ma {
+	    margin-right: 5px;
+    	margin-left: 5px;
+	}	
+}
+
+@media screen and (min-width: 150px) and (max-width: 800px){
+	#s1_1{
+		display: none;
+	}
+
+	#a_logo_s_s{
+		padding-left: 0px;
+	}
+	#logo_s_s{
+		padding-left: 15px;
+	}
+	#a_logo_l_s{
+
+	}
+	#logo_l_s{
+		
+	}
+	#myNavbar{
+		position: fixed;
+		/*top: 50px;*/
+		padding-left: 10px;
+		padding-right: 0px;
+		right: -200px;
+		width: 200px;
+		height: 100%;
+		/*border:5px solid green;*/
+		-webkit-transition: all 0.4s linear;
+	}
+	#myNavbar a:hover{
+		border-bottom: 0px;
+	}
+	
+	#hiw {
+	    margin-left: -20px;
+	}
+	
+	#l_ma{
+	    margin-right: -10px;
+	}
+
+	#s5_2{
+		margin-top: 10%;
+	}	
+	#i_p_l {
+	    margin-top: -30%;
+	}	
+	#i_p_r {
+        margin-bottom: -38.5%;
+	}
+	#name{
+		width: 230px;
+	}
+	#email{
+		width: 230px;
+	}
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

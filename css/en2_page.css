@@ -1,10 +1,14 @@
+/*change background comments in #s4, #s6 , #s8 */
 html{
-	font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-
 #s1_2 hr{
-	height: 3px;
+    height: 3px;
     border: 1px solid;
     color: #F3CF43;
     background-color: #F3CF43;
@@ -12,24 +16,30 @@ html{
 }
 
 nav{
-	/*height: 56px;*/
-	background-color: #000;
+    /*height: 56px;*/
+    background-color: #000;
 }
 
 nav .container-fluid{
-	padding-right: 0%;
-	padding-left: 0%;
-	width: 100%;
+    padding-right: 0%;
+    padding-left: 0%;
+    width: 100%;
 }
 
 .navbar-left{
     margin-right: 6%;
 }
 #a_logo_s_s{
-	display: none;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    padding-top:0; 
 }
 #logo_s_s{
-	height: 55px;
+    opacity: 0;
+    height: 80px;
+    padding-left: 30px;
+    /*transition: opacity 0.3s ease-in-out;*/
 }
 
 #a_logo_l_s{
@@ -39,9 +49,15 @@ nav .container-fluid{
     padding-top:0; 
 }
 #logo_l_s{
-	height: 50px;
+    opacity: 1;
+    height: 50px;
+    padding-left: 30px;
+    /*transition: opacity 0.3s ease-in-out;*/
 }
 
+.is_open{
+    width: 240px;
+}
 #myNavbar{
     padding-left: 50px;
     padding-right: 50px;
@@ -49,47 +65,52 @@ nav .container-fluid{
 }
 
 #myNavbar a{
-	font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: white;
     transition: all 0.1s;
     font-weight: bold;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #myNavbar a:visited{
-	text-decoration: none;
-	text-underline-position: 5%;
+    text-decoration: none;
+    text-underline-position: 5%;
 }
 
 #myNavbar a:focus{
-	text-decoration: none;
-	color: #F3CF43;
-	/*border-bottom: 4px solid #F3CF43;*/
+    text-decoration: none;
+    color: #F3CF43;
+    /*border-bottom: 4px solid #F3CF43; */
 }
 
 #myNavbar a:hover{
-	text-decoration: none;
-	color: #F3CF43;
-	/*border-bottom: 4px solid #F3CF43;*/
+    text-decoration: none;
+    color: #F3CF43;
+    border-bottom: 4px solid #F3CF43; 
 }
 
 #myNavbar .active{
-	color: #F3CF43;
-	/*border-bottom: 4px solid #F3CF43;*/
-	text-decoration: none;
-}
+    color: #F3CF43;
+    /*border-bottom: 4px solid #F3CF43; */
+    text-decoration: none;
+} 
 
 #s1_1 img{
-	/*opacity: 0.2;*/
+    /*opacity: 0.2;*/
 }
 
 #s1_2{
-	/*border: 2px solid LawnGreen;*/
-	margin-bottom: -70px;
+    /*border: 2px solid LawnGreen;*/
+    margin-bottom: -70px;
 }
 
 #nav_row{
-	/*border: 2px solid LemonChiffon;*/
+    /*border: 2px solid LemonChiffon;*/
     height: 100%;
     width: 100%;
     margin-left: 0%;
@@ -115,7 +136,7 @@ nav .container-fluid{
     
 }
 #cp{
-	
+    
 }
 
 #l_au{
@@ -126,37 +147,193 @@ nav .container-fluid{
 }
 
 .navbar-right{
-	
+    
 }
 
 #l_el{
    
 }
 #el{
-	
+    
 }
 
 #l_ma{
 
 }
 #ma{
-	
+    
 }
 
 #l_aq{
 
 }
 #aq{
-	
+    
 }
+/*navbar styling finish here for large screens*/
 
 #s2{
+	margin-top: 120px;
+}
+
+#step_wrapper{
+	height: 50px;
+	width: 100%;
+	background: -webkit-linear-gradient(left,transparent 0%,transparent 6.6%,rgba(228, 206, 128, 0.83) 6.6%,rgba(228, 206, 128, 0.83) 93.5%,transparent 93.5%,transparent 100%);
+}
+
+#s2 .col-sm-3{
+    margin-left: -46px;
+    padding-left: 0;
+	padding-right: 0;
+}
+.box {
+    height: 50px;
+    width: 182px;
+    border: 1px solid blue;
+    border-radius: 2px;
+    border-right: 0;
+    margin-left: 100px;
+}
+
+.box_r{
+	border: none;
+	border-top:1px solid blue;
+	border-bottom:1px solid blue;
+}
+
+#s2 .col-sm-3{
+    pointer-events: none;
+}
+
+#b1{
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    pointer-events: all;
+}
+
+#s2 .col-sm-3 h1{
+    font-size: 16px;
+    margin-top: -18px;
+	color: rgb(78, 183, 245);
+}
+#s2 .col-sm-3 h3{
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.num{
+    margin-top: -18px;
+    height: 100%;
+    width: 25px;
+    font-size: 60px;
+    color: white;
+}
+
+
+#num1{
+
+}
+#num2{
+	color: blue;
+    margin-right: 20px;
+}
+
+.step_name{
+    font-size: 11px;
+    margin-top: -50px;
+    margin-left: 31px;
+}
+#sn1{
+
+}
+#e1{
+    border-left-color: #e0d11a;
+}
+#b2{
+    padding-left: 40px;
+    width: 240px;
+    background: -webkit-linear-gradient(left,transparent 0px,transparent 40px,rgb(74, 73, 70) 40px,rgb(74, 73, 70) 205px,transparent 205px,transparent 240px);
+    pointer-events: all;
+}
+#e2{
 
 }
 
+#b3{
+    margin-left: 168px;
+    width: 195px;
+    pointer-events: all;
+}
+#e3{
+	margin-left: 149%;
+}
+
+#b4{
+    width: 155px;
+    margin-left: 190px;
+    pointer-events: all;
+}
+#e4{
+    margin-left: 158%;
+}
+
+.edge{
+	height: 50px;
+    width: 50px;
+    margin-left: 130%;
+    margin-top: -50px;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 30px solid rgb(74, 73, 70); ;
+}
+.not1_edge{
+	margin-left: 140%;
+}
+
+
+#s2_s3_r{
+
+}
+#hr_left{
+    margin-top: -15px;
+    margin-right: 20px;
+    margin-bottom: -43px;
+    margin-left: 44%;
+}
+#hr_l{
+    border: 2px solid gainsboro;
+    margin-right: 10px;
+}
+
+#or{
+	display: inline-block;
+	margin-right: -35px;
+}
+#hr_right{
+    margin-right: 44%;
+}
+#hr_r{
+    margin-top: 30px;
+    border: 2px solid gainsboro;
+    margin-left: 7px;
+}
+
+/*or for small devices*/
+#or_small{
+    display: none;
+}
+
+/*adjusting gmail-icon for small devices*/
+#gmail_icon{
+   margin-left: 18px;
+   text-align: left;
+   margin-top: 7%;
+}
 #s3{
-    margin-top: 10%;
-    margin-bottom: 0%;
+	margin-top: -15px;
 }
 
 #l_portion{
@@ -197,27 +374,96 @@ nav .container-fluid{
 }
 
 #r_portion{
-	padding-left: 20%;
-	padding-top: 2%;
+	/*padding-left: 20%;
+	padding-top: 2%;*/
+    text-align: left;
 }
 
 #or h1{
-	font-size: 70px;
+	font-size: 40px;
     color: gainsboro;
+    margin-top: 0px;
 }
 
 #fb_icon {
-    margin-left: -4.5%;
+    padding-top: 20px;
 }
 
-#gmail_icon{
+#s3_termsAndCondtions{
+    margin-top: 70px;
+}
 
+#s3_termsAndCondtions .container-fluid{
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+#s3_termsAndCondtions button{
+    height: 300px;
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:none;
+    background: linear-gradient(white,#e0e0e0);
+}
+
+[type="checkbox"]{
+    display: none;
+}
+
+[type="checkbox"]+label{
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+[type="checkbox"]+label:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 1.25em;
+    height: 1.25em;
+    border:2px solid #ccc;
+    background:#fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+[type="checkbox"]+label:after{
+    content: '\2714';
+    position: absolute;
+    top: 0.25em;
+    left: 0.1em;
+    font-size: 1.3em;
+    line-height: 0.8;
+    color: #09ad7e;
+    transition: all 0.2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after{
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after{
+    opacity: 1;
+    transform: scale(1);
+}
+
+label:hover:before{
+    border:2px solid #4778d9 !important;
+}
+
+/*to give border to selected button*/
+#s4 .selected{
+    border:2px solid green;
 }
 
 #s4{
-	margin-bottom: 8%;
-	/*margin-left: 75%;*/
-
+    margin-top: -63px;
+    margin-bottom: 100px;
+	margin-right: 225px;
 }
 #s4 button{
 	height: 50px;
@@ -375,29 +621,123 @@ footer a:focus{
 }
 
 @media screen and (min-width: 1000px){
-	#l_cp{
-    	margin-left: 30px;
-	}
-	#l_el{
-	    margin-right: 40px;
-	}	
+	#l_hiw {
+        margin-left: -15px;
+    }
+    #l_cp{
+        margin-left: 30px;
+    }
+    #l_el{
+        margin-right: 15px;
+    }
+    #l_ma {
+        margin-right: 5px;
+        margin-left: 5px;
+    }   
 }
 
 @media screen and (min-width: 150px) and (max-width: 800px){
-	#s1_1{
-		display: none;
-	}
+    #s1_1{
+        display: none;
+    }
 
-	/*#myNavbar{
-		position: fixed;
-		top: 50px;
-		right: 0;
-		width: 250px;
-		height: 100%;
-		z-index: 1000000;
+    #a_logo_s_s{
+        padding-left: 0px;
+    }
+    #logo_s_s{
+        padding-left: 15px;
+    }
+    #a_logo_l_s{
+        width: 70%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #logo_l_s{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 0;
+    }
 
-		transition: height 0.5s;
-	}*/
+    .collapse{
+        display: block;
+    }
+
+    #myNavbar{
+        position: fixed;
+        /*top: 50px;*/
+        padding-left: 25px;
+        padding-right: 0px;
+        right: -240px;
+        width: 240px;
+        height: 100%;
+        /*border:5px solid green;*/
+        /*will-change:transition;*/
+        /*transition: right 0.4s;*/
+    }
+
+    #myNavbar a {
+        padding-bottom: 10px;
+    }
+    .navbar-left {
+        margin-bottom: 0px;
+    }
+    .navbar-right{
+        margin-top: 0px;
+    }
+    #myNavbar a:hover{
+        border-bottom: 0px;
+    }
+    
+    #hiw {
+        margin-left: -20px;
+    }
+    
+    #l_ma{
+        margin-right: -10px;
+    }
+    /*navbar for small screen finishes here*/
+
+	#s2{
+
+    }
+    #step_wrapper{
+        background: none;
+    }
+    .edge{
+        border-left: none;
+    }
+    #b1{
+	    border-bottom-left-radius: 0px;
+	    border-top-left-radius: 0px;
+    	border-left: 0px;
+    }
+    #b2{
+        padding-left: 0px;
+        width: 180px;
+        background: -webkit-linear-gradient(left,transparent 0px,transparent 0px,rgb(74, 73, 70) 0px,rgb(74, 73, 70) 205px,transparent 205px,transparent 240px);
+    }
+    #b3{
+        margin-left: 100px;
+        width: 180px;
+    }
+    #b4{
+        width: 180px;
+        margin-left: 100px;
+    }
+
+    /*for not showing hr lines in small devices*/
+    #hr_left,#hr_right,#or{
+        display: none;
+    }
+    /*to put "or" appropriately */
+    #or_small{
+        display: block;
+        font-size: 40px;
+        color: gainsboro;
+        margin-top: 0px;
+        text-align: center;
+    }
 
 	#l_portion{
 		text-align: left;
@@ -405,10 +745,17 @@ footer a:focus{
 
 	#r_portion{
 		padding:0;
+	    margin-top: 30px;
 	}
 
 	#u_avatar_label{
+		display: block;
+		margin-top: 10px;
+	}
+
+	#s4{
 		margin: 0;
+		margin-bottom: 70px;
 	}
 
 	#s4 .container-fluid{
@@ -423,4 +770,12 @@ footer a:focus{
 	#s4 .col-xs-12{
 		text-align: center;
 	}
+
+	#left_text{
+        text-align: center;
+    }
+	
+    #s6{
+        margin-left: 50px;
+    }
 }
