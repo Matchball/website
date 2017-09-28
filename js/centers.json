@@ -1,0 +1,9 @@
+[
+	{"Address":"Sec-93 Gurgaon","CenterName":"Gurgaon complex","StartingDate":"10/10/2017","Vacancy":15,"isOpenForResidents":"y","isOpenToAll":"n"},
+	{"Address":"Sec-94 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"5/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"},
+	{"Address":"Sec-95 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"7/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"},
+	{"Address":"Sec-96 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"10/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"},
+	{"Address":"Sec-97 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"12/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"},
+	{"Address":"Sec-98 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"15/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"},
+	{"Address":"Sec-100 Gurgaon","CenterName":"Gurgaon 2","StartingDate":"20/10/2017","Vacancy":16,"isOpenForResidents":"y","isOpenToAll":"y"}
+]

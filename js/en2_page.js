@@ -308,20 +308,23 @@ function hideEmailAndPasswords(){
 	});
 }
 
-// save details in firebase database
+// save details in firebase database with key as encoded email
+var encodedEmail;  
 function saveUserDetailsInDatabase(){
 	firebase.auth().onAuthStateChanged(function(user){
 		$email=user.email;
 		$uid=user.uid;
 		console.log("uid="+$uid);
 		console.log("email="+$email);
+		encodedEmail=$email.replace('.',',');
+		showProcessingAnimation();
 		storeImageAndRestDetails();
 	});
 
 	function storeImageAndRestDetails(){	
 		// emailFirstPart will be the key for user credentials
 		$emailFirstPart=$email.split('@')[0];
-		var imageStorageRef=firebase.storage().ref('userPhotos/'+$uid);
+		var imageStorageRef=firebase.storage().ref('userPhotos/'+encodedEmail);
 
 		imageStorageRef.put(imageFile).then(function(snapshot){
 			console.log("snapshot="+snapshot);
@@ -329,7 +332,7 @@ function saveUserDetailsInDatabase(){
 			imageStorageRef.getDownloadURL().then(function(url){
 				$imageDownloadUrl=url;
 				console.log("download url="+$imageDownloadUrl);
-				$otp=generateAndSendOTPAndSaveRestDetails($uid);
+				$otp=generateAndSendOTPAndSaveRestDetails(encodedEmail);
 				// saveRestDetails();
 				// alert("Successfully Registered, we will reach to you as soon as possible");
 			}).catch(function(error){
@@ -340,11 +343,13 @@ function saveUserDetailsInDatabase(){
 			console.log("error message="+error.message);
 		});
 	}
-
-	
 }
 
-function generateAndSendOTPAndSaveRestDetails($uid){
+function showProcessingAnimation(){
+	$("#s4_s").css({"display":"block"});
+}
+
+function generateAndSendOTPAndSaveRestDetails(encodedEmail){
 	var randomOTP=Math.floor(Math.random()*(9000)+1000);
 	var contactNumber="91"+$("#u_mobilenumber").val();
 
@@ -366,7 +371,9 @@ function generateAndSendOTPAndSaveRestDetails($uid){
 	xhttp.send();
 
 	function saveRestDetails(){
-		var databaseRef=firebase.database().ref('newRegistrations/'+$uid).set({
+		// key for storing details in database will be email id in which dots will be replaced by commas
+		console.log("encodedEmail="+encodedEmail);
+		var databaseRef=firebase.database().ref('newRegistrations/'+encodedEmail).set({
 			Email:$email,
 			Name:$("#u_name").val(),
 			MobileNumber:$("#u_mobilenumber").val(),
@@ -379,8 +386,8 @@ function generateAndSendOTPAndSaveRestDetails($uid){
 			CallConfirmation:'n',
 			OTPConfirmation:'n',
 			OTP:$otp,
+			CenterCity:localStorage.getItem("center_city"),
 		}).then(function(){
-			alert("Successfully Registered, we will reach to you as soon as possible");
 			window.location='https://matchball.org/en3_page.html';
 		});
 	}

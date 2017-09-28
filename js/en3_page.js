@@ -81,11 +81,13 @@ $(document).ready(function(){
 
 	var callFlag='n';
 	var otpFlag='n';
+	var encodedEmail;
 	// decide otp and call images on page load
 	firebase.auth().onAuthStateChanged(function(user){
 		if(user){
 			console.log("user 11="+user);
-			var userRef=firebase.database().ref("newRegistrations/"+user.uid);
+			encodedEmail=user.email.replace('.',',');
+			var userRef=firebase.database().ref("newRegistrations/"+encodedEmail);
 			userRef.on('value',function(snapshot){
 				var userDetails=snapshot.val();
 
@@ -125,6 +127,15 @@ $(document).ready(function(){
 	});
 	
 
+	//bind verify and enter
+	$('#u_otp').keypress(function (e) {
+		var key = e.which;
+		if(key == 13)  // the enter key code
+			{
+			    $("#verifyOTP").click();
+			    return false;  
+			}
+	});  
 	// verify otp button
 	$("#verifyOTP").on('click',function(e){
 		e.preventDefault();
@@ -134,13 +145,13 @@ $(document).ready(function(){
 		firebase.auth().onAuthStateChanged(function(user){
 			if(user){
 				$user_uid=user.uid;
-				var otpRef=firebase.database().ref("newRegistrations/"+$user_uid+"/OTP");
+				var otpRef=firebase.database().ref("newRegistrations/"+encodedEmail+"/OTP");
 				otpRef.on('value',function(snapshot){
 					$user_otp=snapshot.val();
 					console.log("user otp="+$user_otp+" filledOTP="+$filledOTP);
 					if($user_otp==$filledOTP){
 						changeOTPCrossImageToRight();
-						firebase.database().ref("newRegistrations/"+$user_uid).update({"OTPConfirmation":'y'}).catch(function(error){
+						firebase.database().ref("newRegistrations/"+encodedEmail).update({"OTPConfirmation":'y'}).catch(function(error){
 							console.log("error in updating="+error.message);
 						});
 					}
@@ -178,7 +189,7 @@ $(document).ready(function(){
 			if(this.readyState==4){
 				$otp=randomOTP;
 				console.log("UserUID="+UserUID);
-				var updateOtpRef=firebase.database().ref("newRegistrations/"+UserUID).update({"OTP":$otp});
+				var updateOtpRef=firebase.database().ref("newRegistrations/"+encodedEmail).update({"OTP":$otp});
 			}
 		}
 
