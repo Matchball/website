@@ -329,18 +329,38 @@ nav .container-fluid{
 }
 
 #s4{
-    margin-bottom: 100px;
+    margin:auto;
+    margin-bottom: 8%;
+    height: 90px;
+    width: 180px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
     text-align: center;
+    transition: color 0.3s,margin 0.3s,padding 0.3s,opacity 2s;
+
 }
 
-#nextStep{
-    border:none;
-    height: 50px;
-    width: 150px;
-    background-color: #60c55e;
-    color: white;
-    font-size: 17px;
+#s4 button{
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: #F3CF43;
+    font-size: 20px;
+    transition: all 0.2s;
 }
+
+#s4 button:focus{
+    outline: none;
+}
+
+#s4 button:hover{
+    margin-top: -4px;
+    background-color: white;
+    border: 1px solid gray;
+    color: #F3CF43;
+}
+
 
 
 

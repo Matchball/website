@@ -297,6 +297,53 @@ nav .container-fluid{
 #s2_s3_r{
 
 }
+
+/*for styling gmail logo*/
+#gmail_logo{
+    font-size: 16px;
+    height: 49px;
+    width: 250px;
+    background-color:#E24825;
+    color: white;
+    border-radius: 0px;
+}
+#gmail_logo:focus{
+    outline: none;
+}
+
+#gmail_logo:hover{
+    color:rgb(255, 245, 245);
+}
+
+/*for styling facebook logo*/
+#fb_logo{
+    font-size: 16px;
+    height: 49px;
+    width: 250px;
+    background-color:#385499;
+    color: white;
+    border-radius: 0px;
+}
+#fb_logo:focus{
+    outline: none;
+}
+#fb_logo:hover{
+    color: #eefaff;
+}
+
+
+#fb_icon {
+    padding-right: 30px;
+    padding-top: 46px;
+}
+
+/*adjusting gmail-icon for small devices*/
+#gmail_icon{
+   margin-left: 10px;
+   text-align: left;
+   margin-top: 7%;
+}
+
 #hr_left{
     margin-top: -15px;
     margin-right: 20px;
@@ -306,6 +353,7 @@ nav .container-fluid{
 #hr_l{
     border: 2px solid gainsboro;
     margin-right: 10px;
+    margin-top: 44px;
 }
 
 #or{
@@ -326,12 +374,6 @@ nav .container-fluid{
     display: none;
 }
 
-/*adjusting gmail-icon for small devices*/
-#gmail_icon{
-   margin-left: 18px;
-   text-align: left;
-   margin-top: 7%;
-}
 #s3{
 	margin-top: -15px;
 }
@@ -369,7 +411,8 @@ nav .container-fluid{
     text-align: center;
     border-radius: 2px;
     /* border: 1px solid hsla(216, 100%, 50%, 0.14); */
-    background: linear-gradient(#569bc2,rgba(197, 197, 208, 0.58),#569bc2);
+    background-color: #F3CF43;
+    color:white;
     position: absolute;
 }
 
@@ -385,9 +428,6 @@ nav .container-fluid{
     margin-top: 0px;
 }
 
-#fb_icon {
-    padding-top: 20px;
-}
 
 #s3_termsAndCondtions{
     margin-top: 70px;
@@ -404,7 +444,7 @@ nav .container-fluid{
     padding-left: 10px;
     padding-right: 10px;
     border:none;
-    background: linear-gradient(white,#e0e0e0);
+    background-color: 
 }
 
 [type="checkbox"]{
@@ -455,26 +495,48 @@ label:hover:before{
     border:2px solid #4778d9 !important;
 }
 
-/*to give border to selected button*/
-#s4 .selected{
-    border:2px solid green;
+#s4_b{
+    margin-bottom: 8%;
+    margin-left: 75%;
+    height: 90px;
+    width: 210px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    transition: color 0.3s,margin 0.3s,padding 0.3s,opacity 2s;
+
 }
 
-#s4{
-    margin-top: -63px;
-    margin-bottom: 100px;
-	margin-right: 225px;
-}
-#s4 button{
-	height: 50px;
-	width: 150px;
-	border-radius: 5px;
-	text-decoration: none;
+#s4_b button{
     border: none;
-    color: white;
-    font-size: 24px;
-    background:linear-gradient(#569bc2, #416daa);
+    height: 100%;
+    width: 100%;
+    background-color: #F3CF43;
+    font-size: 20px;
+    transition: all 0.2s;
 }
+
+#s4_b button:focus{
+    outline: none;
+}
+
+#s4_b button:hover{
+    margin-top: -4px;
+    background-color: white;
+    border: 1px solid gray;
+    color: #F3CF43;
+}
+
+#s4_s{
+    display: none;
+    margin-left: -20px;
+    padding-left: 0px;
+}
+
+#s4_s img{
+    margin-top: -30px;
+}
+
 
 
 
