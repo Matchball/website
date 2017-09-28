@@ -6,10 +6,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- custom css styles file page.css -->
-	<link rel="stylesheet" href="css/en1_page.css">
-
-
 	<!-- to connect with firebase -->
 		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 		<script>
@@ -19,11 +15,14 @@
 		    authDomain: "matchpoint-abe8e.firebaseapp.com",
 		    databaseURL: "https://matchpoint-abe8e.firebaseio.com",
 		    projectId: "matchpoint-abe8e",
-		    storageBucket: "",
+		    storageBucket: "gs://matchpoint-abe8e.appspot.com/",
 		    messagingSenderId: "969910365945"
 		  };
 		  firebase.initializeApp(config);
 		</script>
+
+	<!-- custom css styles file page.css -->
+	<link rel="stylesheet" href="css/en1_page.css">
 
 	<!-- to use bootsrap libraries are added online -->
 
@@ -200,6 +199,9 @@
 				    <select class="form-control" id="city" style="width: 80%; display: inline-block;">
 				    	<option>Gurgaon</option>
 				    	<option>Noida</option>
+				    	<option>Gurgaon_3</option>
+				    	<option>Gurgaon_4</option>
+				    	<option>Gurgaon_7</option>
 				    </select>
 				</div>	
 			</div>
@@ -212,59 +214,22 @@
 <div id="s4">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-3 col-xs-12">
+			<div class="col-sm-2 col-xs-12">
+				<button class="btn" id="btn_l" style="display: none;">
+					Prev
+				</button>
 			</div>
 
-			<div class="col-sm-3 col-xs-12">
-				<button id="Gurgaon complex">
-					<h1>Gurgaon complex</h1>
-					<h3>Sec-93 Noida</h3>
-					<div class="r_container">
-						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
-					</div>
-					<div class="l_container">
-						<img src="images/wrong_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
-					</div>
+			<div class="col-sm-8 col-xs-12">
+				<div class="centers expand" id="centers">
+				</div>
+			</div>
+
+			<div class="col-sm-2 col-xs-12">
+				<button class="btn" id="btn_r" style="display: none;">
+					Next
 				</button>
 			</div>
-			<div class="col-sm-3 col-xs-12">
-				<button id="nehru stadium">
-					<h1>Nehru stadium</h1>
-					<h3>Sec-90 Noida</h3>
-					<div class="r_container">
-						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
-					</div>
-					<div class="l_container">
-						<img src="images/right_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
-					</div>
-				</button>
-			</div>
-			<div class="col-sm-3 col-xs-12">
-			</div>
-			<!-- <div class="col-sm-3 col-xs-12" style="display: none;">
-				<button>
-					<h1>ATS VILLAGE</h1>
-					<h3>Sec-93 Noida</h3>
-					<div class="r_container">
-						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
-					</div>
-					<div class="l_container">
-						<img src="images/wrong_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
-					</div>
-				</button>
-			</div>
-			<div class="col-sm-3 col-xs-12" style="display: none;">
-				<button>
-					<h1>ATS VILLAGE</h1>
-					<h3>Sec-93 Noida</h3>
-					<div class="r_container">
-						<img src="images/right_tick.png" alt="Right"><span class="o_r">Open Residents</span>
-					</div>
-					<div class="l_container">
-						<img src="images/wrong_tick.png" alt="Wrong"><span class="o_o">Open Outsiders</span>
-					</div>
-				</button>
-			</div> -->
 		</div>
 	</div>
 </div>
